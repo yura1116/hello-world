@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+<link rel="stylesheet" type="text/css" href="font/demo.css"/>
+<script language="JavaScript" src="js/jquery.js"></script>
+
+<script type="text/javascript">
+$(function(){	
+	//导航切换
+	$(".menuson li").click(function(){
+		$(".menuson li.active").removeClass("active")
+		$(this).addClass("active");
+	});
+	
+	$('.title').click(function(){
+		var $ul = $(this).next('ul');
+		$('dd').find('ul').slideUp();
+		if($ul.is(':visible')){
+			$(this).next('ul').slideUp();
+		}else{
+			$(this).next('ul').slideDown();
+		}
+	});
+})	
+</script>
+
+
+</head>
+
+<body style="background:#f0f9fd;">
+	<div class="lefttop"><span></span>控制台</div>
+    
+    <dl class="leftmenu">
+        
+    <dd>
+    <div class="title">
+    <span><i class="icon iconfont icon-set" style="font-size: 14px; line-height: 15px; color:#3f97c9 ;"></i></span>系统管理
+    </div>
+    	<ul class="menuson">
+        <li><cite></cite><a href="index.html" target="rightFrame">角色管理</a><i></i></li>
+        <li class="active"><cite></cite><a href="right.html" target="rightFrame">成员管理</a><i></i></li>
+
+        </ul>    
+    </dd>
+        
+    
+    <dd>
+    <div class="title">
+    <span><i class="icon iconfont icon-gouwu" style="font-size: 14px; line-height: 15px; color:#3f97c9;"></i></span>产品管理
+    </div>
+    <ul class="menuson">
+        <li><cite></cite><a href="#">产品列表</a><i></i></li>
+        <li><cite></cite><a href="#">产品添加</a><i></i></li>
+
+        </ul>     
+    </dd> 
+    
+    
+    <dd><div class="title"><span><i class="icon iconfont icon-yizhongbiao" style="font-size: 14px; line-height: 15px; color:#3f97c9;"></i></span>内部查询</div>
+    <ul class="menuson">
+        <li><cite></cite><a href="#">医院名录</a><i></i></li>
+        <li><cite></cite><a href="#">历史中标数据</a><i></i></li>
+        <li><cite></cite><a href="#">统计管理</a><i></i></li>
+    </ul>    
+    </dd>  
+    
+    <!--<frame src="order/orderlist.html" name="rightFrame" id="rightFrame" title="rightFrame" />-->
+    <dd><div class="title"><span><i class="icon iconfont icon-zixunzhuanhuan" style="font-size: 14px; line-height: 15px; color:#3f97c9;"></i></span>业务管理</div>
+    <ul class="menuson">
+        <li><cite></cite><a href="order/orderlist.html" target="rightFrame">订单管理</a><i></i></li>
+        <li><cite></cite><a href="#" >会员管理</a><i></i></li>
+        <li><cite></cite><a href="data/datalist.html" target="rightFrame">数据库价格修改</a><i></i></li>
+        <li><cite></cite><a href="article/articlelist.html" target="rightFrame">文章管理</a><i></i></li>
+    </ul>
+    
+    </dd>   
+    
+     <dd><div class="title"><span><i class="icon iconfont icon-tongxunlu" style="font-size: 14px; line-height: 15px; color:#3f97c9;"></i></span>通讯录</div>
+    <ul class="menuson">
+        <li><cite></cite><a href="#">管理员通讯录</a><i></i></li>
+        <li><cite></cite><a href="#">用户通讯录</a><i></i></li>
+        
+    </ul>
+    
+    </dd>   
+    
+    </dl>
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>栏目管理</title>
+		<link rel="stylesheet" href="../css/bootstrap.css" />
+		<script type="text/javascript" src="../js/jquery.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../js/vue.js"></script>
+	</head>
+
+	<body>
+		<div>
+			<div>
+				<form class="form-inline" role="form">
+					<div class="form-group">
+						<ul class="breadcrumb">
+							<label>位置:</label>
+							<li>
+								<a href="#" style="color: #000000;">业务管理</a>
+							</li>
+							<li>
+								<a href="#" style="color: #000000;">文章管理</a>
+							</li>
+							<li>
+								<font style="color: #000000;">栏目管理</font>
+							</li>&nbsp;&nbsp;
+					</div>
+					</ul>
+			</div>
+
+			<div>
+				<div class="form-group">
+					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">添加</button>
+					<button type="button" class="btn btn-danger">删除</button>
+				</div>
+			</div>
+
+			<div>
+				<div id="app">
+					<table class="table table-hover text-center">
+						<tr>
+							<th class="text-center">
+								<label>
+									<input type="checkbox" />
+								</label>
+							</th>
+							<th class="text-center">ID</th>
+							<th class="text-center">栏目名称</th>
+							<th class="text-center">文章数量</th>
+							<th class="text-center">操作</th>
+
+						</tr>
+
+						<tr v-for="lan in lans">
+							<td>
+								<label>
+									<input type="checkbox" v-bind:value="lan.id" v-model="checkedNames"/>
+								</label>
+							</td>
+							<td>{{lan.id}}</td>
+							<td>{{lan.name}}</td>
+							<td>{{lan.amount}}</td>
+							<td class="text-center">
+								<button type="button" class="btn btn-primary">编辑</button>
+								<button type="button" class="btn btn-danger">删除</button>
+							</td>
+						</tr>
+
+					</table>
+
+					<div class="text-right">
+						<ul class="pagination">
+							<li>
+								<a href="#">«</a>
+							</li>
+							<li>
+								<a href="#">1</a>
+							</li>
+							<li>
+								<a href="#">2</a>
+							</li>
+							<li>
+								<a href="#">3</a>
+							</li>
+							<li>
+								<a href="#">4</a>
+							</li>
+							<li>
+								<a href="#">5</a>
+							</li>
+							<li>
+								<a href="#">>></a>
+							</li>
+						</ul>
+
+					</div>
+
+					<p style="display: none;">Checked names: {{ checkedNames }}</p>
+					<!--start-modal-->
+					<div class="modal fade" role="dialog" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="hide">
+						<div class="modal-dialog" style="width:350px;">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">
+					  					<span aria-hidden="true">&times;</span>
+					  					<span class="sr-only">Close</span>
+					  				</button>
+
+									<h4 class="modal-title" id="myModalLabel">添加栏目</h4>
+								</div>
+								<div class="modal-body">
+									<!--栏目名称<input type="text" class="form-control" placeholder="" v-model="lan.name" style="width:100px"/> -->
+									<div class="input-group">
+							            <span class="input-group-addon">栏目名称</span>
+							            <input type="text" class="form-control" placeholder="" v-model="lan.name">
+							        </div>
+							         <!--<div class="col-lg-7">-->
+               	 					<div class="input-group">
+									 <div class="input-group-btn">
+				                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">所属栏目
+				                            <span class="caret"></span>
+				                        </button>
+				                        <ul class="dropdown-menu">
+				                            <li>
+				                                <a href="#">功能</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">另一个功能</a>
+				                            </li>
+				                   
+				                        </ul>
+				                    </div><!-- /btn-group -->
+				                     <input type="text" class="form-control">
+					                </div><!-- /input-group -->
+						            </div><!-- /.col-lg-6 -->
+								</div>
+
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+									<button type="button" class="btn btn-primary" data-dismiss="modal" v-on:click="addLan">确定</button>
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</body>
+
+	<script>
+		new Vue({
+			el: '#app',
+			data: {
+				lan: {
+					name: '',
+
+				},
+				checkedNames: [],
+				lans: [{
+					id: '1',
+					name: '招标咨询',
+					amount: '30'
+				}, {
+					id: '2',
+					name: '招标咨询',
+					amount: '30'
+
+				}]
+
+			},
+			methods: {
+				addLan: function() {
+					this.lans.push(this.lan);
+				}
+
+			}
+
+		})
+	</script>
+
+</html>

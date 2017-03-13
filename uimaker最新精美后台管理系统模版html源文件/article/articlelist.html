@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>文章列表</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css"/>
+    	<script type="text/javascript" src="../js/jquery.js" ></script>
+	    <script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+		<script type="text/javascript" src="../js/vue.js" ></script>
+	</head>
+	<body>
+    <div >
+        <!-- start list -->
+        <div>
+        	<form class="form-inline" role="form">
+			<div class="form-group">
+			<ul class="breadcrumb">
+				<label>位置:</label>
+				<li><a href="#" style="color: #000000;">业务管理</a></li>   
+				<li><a href="#" style="color: #000000;">文章管理</a></li>   
+				<li><font style="color: #000000;">文章列表</font></li>&nbsp;&nbsp;&nbsp;
+			    <font style="font-family: '微软雅黑';color: #778899;">栏目</font>
+			    <div class="btn-group">
+				    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">==请选择栏目==
+				        <span class="caret"></span>
+				    </button>
+				    <ul class="dropdown-menu" role="menu">
+				        <li>
+				            <a href="#">招标公告</a>
+				        </li>
+				        <li>
+				            <a href="#">xxxx</a>
+				        </li>
+				    </ul>
+				</div>
+				&nbsp;&nbsp;&nbsp;
+				<font style="font-family: '微软雅黑';color: #778899;">标题:</font>
+				<input type="text" class="form-control" id="title"/>&nbsp;&nbsp;&nbsp;
+				<font style="font-family: '微软雅黑';color: #778899;">状态:</font>
+			    <div class="btn-group">
+				    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">==请选择状态==
+				        <span class="caret"></span>
+				    </button>
+				    <ul class="dropdown-menu" role="menu">
+				        <li>
+				            <a href="#">显示</a>
+				        </li>
+				        <li>
+				            <a href="#">不显示</a>
+				        </li>
+				    </ul>
+				</div>
+				&nbsp;&nbsp;
+				<button type="button" class="btn btn-primary" v-on:click="">搜索</button>
+				 </div>
+				</form>
+			</ul> 
+        </div>
+        
+        <div class="col-md-12" >
+            <!--<div class="h2 text-center text-muted">
+            	订单列表
+            </div>-->
+            <div id="app">
+                <table class="table table-hover text-center">
+                    <tr class="text-center text-info" id="se">
+                    	<th class="text-center"> 
+                    		<label>
+                              <input type="checkbox">
+                            </label>
+                    	</th>
+                        <th class="text-center">标题</th>
+                        <th class="text-center">栏目</th>
+                        <th class="text-center">发布时间</th>
+                        <th class="text-center">发布作者</th>
+                    	<th  class="text-center">状态</th>
+                    	<th  class="text-center">操作</th>
+                    </tr>
+                    <tr v-for="article in articles " style="color: #000000;font-family: '微软雅黑';">
+                        <td>
+                            <label>
+                              <input type="checkbox" v-bind:value="article.id" v-model="checkedNames">
+                            </label>
+                        </td>
+                        <td>{{article.id}}</td>
+                        <td>{{article.name}}</td>
+                        <td>{{article.time}}</td>
+                        <td>{{article.author}}</td>
+                        <td>{{article.status}}</td>
+                        <td  class="text-center">
+                        	<input type="button" class="btn btn-primary btn-sm" value="查看" />
+                        	<input type="button" class="btn btn-primary btn-sm" value="编辑" />
+                        	<input type="button" class="btn btn-danger btn-sm" value="删除" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="8" class="text-center">
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">增加</button>
+                            <button type="button" class="btn btn-danger" v-on:click="delItems">删除</button>
+                        </td>
+                    </tr>
+                </table>
+                
+                  <div class="text-right">
+                	 <ul class="pagination">
+						<li><a href="#">«</a></li>
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#">»</a></li>
+					</ul>
+                </div>
+                
+                <p style="display: none;">Checked names: {{ checkedNames }}</p>
+
+                <!-- start modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                <h4 class="modal-title" id="myModalLabel">添加订单</h4>
+                            </div>
+                            <div class="modal-body">
+                                                               文章标题<input class="form-control" placeholder="input id" v-model="article.id">
+                                                               发布作者<input class="form-control" placeholder="input author" v-model="article.author">
+                                                               文章栏目<input class="form-control" placeholder="input name" v-model="article.name">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal" v-on:click="addItem">保存</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end modal -->
+
+            </div>
+        </div>
+        <!-- end list -->
+
+    </div>
+</body>
+<script>new Vue({
+	el: '#app',
+	data: {
+		article: {
+			id: '0',
+			name: '',
+			time: '',
+			author: '',
+			status:''
+		},
+		checkedNames: [],
+		articles: [{
+			id: '普通耗材和检验试剂集中采购',
+			name: '招标公告',
+			time: '2013-09-01 15：05',
+			author: 'admin',
+			status:'已显示'
+		}, {
+			id: '普通耗材和检验试剂集中采购',
+			name: '招标公告',
+			time: '2013-09-01 15：05',
+			author: 'admin',
+			status:'已显示'
+
+		}]
+	},
+	methods: {
+		delItems: function() {
+			for(var i = 0; i < this.checkedNames.length; i++) {
+				for(var j = 0; j < this.articles.length; j++) {
+					var cur_article = this.articles[j];
+					if(cur_article.id == this.checkedNames[i]) {
+						this.articles.splice(j, 1);
+					}
+				}
+			}
+			this.checkedNames = [];
+		},
+		addItem: 　 function() {
+			this.articles.push(this.article);
+		}
+		
+		
+	}
+})</script>
+</html>
+
