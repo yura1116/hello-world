@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
+<title>博得IT教育助学计划</title>
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<link rel="stylesheet" type="text/css" href="css.css">
+<script src="jquery.js" type="text/javascript"></script>
+<script>
+function submit_chk(obj)
+{
+	if (obj.xm.value=='请填写您的真实姓名'||obj.xm.value==''){
+		alert('请填写姓名！');obj.xm.focus();return false;
+	}	
+	if (obj.dh.value=='请填写您的真实电话'||obj.dh.value==''){
+		alert('请填写电话！');obj.dh.focus();return false;
+	}	
+
+	if (obj.s_province.value=='省份'||obj.s_province.value==''){
+		alert('请选择您的所在的省份！');obj.s_province.focus();return false;
+	}
+	if (obj.s_city.value=='地级市'||obj.s_city.value==''){
+		alert('请选择您的所在的城市！');obj.s_city.focus();return false;
+	}
+	if (obj.s_county.value=='市、县级市'||obj.s_county.value==''){
+		alert('请选择您的所在的地区！');obj.s_county.focus();return false;
+	}
+}
+function getRadioValue(name){
+	var radioes = document.getElementsByName(name); 
+	for(var i=0;i<radioes.length;i++)
+	{
+		 if(radioes[i].checked){
+		  return radioes[i].value;
+		 }
+	}
+}
+</script>
+<script type="text/javascript">
+function uaredirect(murl){  
+   try {  
+		if(document.getElementById("bdmark") != null){  
+			return;  
+		}  
+		var urlhash = window.location.hash;  
+		if (!urlhash.match("PC")){  
+			if ((navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i))) {  
+					location.replace(murl);  
+			}  
+		}  
+	}
+	 catch(err){}
+	} 
+	var url="http://www.boode.com.cn/";
+uaredirect(url+"/mobile/");
+</script></head>
+
+
+
+<body>
+	<div class="head_1" name="top" id="top">
+		<div class="head_1_1"><img src="logo.jpg" alt="logo" width="420" height="80"></div>
+	</div>
+	
+	<div class="head_2" style="width:100%;height:100%;background:url(2.jpg); background-position:center bottom">
+		<div class="head_2_1">
+			<div class="head_2_1_1" style="background-color:#FAFBFD">
+				<div class="head_2_1_1_1">填写信息，试试我能贷多少钱</div>
+				<form name="form1" onsubmit="return submit_chk(this);" action="admin/dk_save.asp?action=savenew" method="post">
+					
+					<div class="head_2_1_1_3">
+						<input name="xm" id="xm" class="input_1" onfocus="if(value=='请填写您的真实姓名')  {value=''}" onblur="if (value=='') {value='请填写您的真实姓名'}" type="text">	
+					</div>
+					<div class="head_2_1_1_3">
+						<input name="dh" id="dh" class="input_1" value="请填写您的真实电话" onfocus="if(value=='请填写您的真实电话')  {value=''}" onblur="if (value=='') {value='请填写您的真实电话'}" type="text">
+					</div>
+					<div class="head_2_1_1_3">
+						<select id="s_province" name="s_province" class="select_1"><option value="省份" selected="selected">省份</option><option value="北京市">北京市</option><option value="天津市">天津市</option><option value="上海市">上海市</option><option value="重庆市">重庆市</option><option value="河北省">河北省</option><option value="山西省">山西省</option><option value="内蒙古">内蒙古</option><option value="辽宁省">辽宁省</option><option value="吉林省">吉林省</option><option value="黑龙江省">黑龙江省</option><option value="江苏省">江苏省</option><option value="浙江省">浙江省</option><option value="安徽省">安徽省</option><option value="福建省">福建省</option><option value="江西省">江西省</option><option value="山东省">山东省</option><option value="河南省">河南省</option><option value="湖北省">湖北省</option><option value="湖南省">湖南省</option><option value="广东省">广东省</option><option value="广西">广西</option><option value="海南省">海南省</option><option value="四川省">四川省</option><option value="贵州省">贵州省</option><option value="云南省">云南省</option><option value="西藏">西藏</option><option value="陕西省">陕西省</option><option value="甘肃省">甘肃省</option><option value="青海省">青海省</option><option value="宁夏">宁夏</option><option value="新疆">新疆</option><option value="香港">香港</option><option value="澳门">澳门</option><option value="台湾省">台湾省</option></select>
+						<select id="s_city" name="s_city" class="select_2"><option value="地级市" selected="selected">地级市</option></select>
+						
+						<script type="text/javascript" src="area.js"></script>
+						<script type="text/javascript">_init_area();</script>
+						
+						<script type="text/javascript">
+						var Gid  = document.getElementById ;
+						var showArea = function(){
+						Gid('show').innerHTML = "<h3>" + Gid('s_province').value + " - " + 
+													Gid('s_city').value + " - " + 
+													Gid('s_county').value + "</h3>"
+						}
+						Gid('s_county').setAttribute('onchange','showArea()');
+						</script>
+					</div>
+					<div class="head_2_1_1_3"><select id="s_county" name="s_county" class="select_3"></select></div>
+					<div class="head_2_1_1_4"><input name="button" id="button" value=" 领取我的助学额度 " class="input_2" type="submit"></div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	<div class="head_5" name="2F" id="2F">
+		<div class="head_5_1">
+			<div class="head_5_1_1">百度有钱花</div>
+			<div class="head_5_1_2"><font style="color:#FF6633">简单、快捷、便利</font>的服务助你成才</div>
+			<div class="head_5_1_3">
+				<div class="head_5_1_3_1">
+				<div class="head_5_1_3_1_1"></div>
+				<div class="head_5_1_3_1_2">什么是百度有钱花教育贷款</div>
+				<div class="head_5_1_3_1_3"></div>
+				<div class="head_5_1_3_1_4">
+					<div class="head_5_1_3_1_4_1"><img src="index_1.png" alt="" width="150" height="111"></div>
+					<div class="head_5_1_3_1_4_2">百度金融自2013年起，面向全国有接受教育意愿的用户提供优质安心的贷款服务，让更多人有机会接受教育，实现自我价值。</div>
+				</div>
+			</div>
+			</div>
+			<div class="head_5_1_4">
+				<div class="head_5_1_4_1">
+				<div class="head_5_1_4_1_1"></div>
+				<div class="head_5_1_4_1_2">有钱花贷款特点</div>
+				<div class="head_5_1_4_1_3"></div>
+				<div class="head_5_1_3_1_4">
+					<div class="head_5_1_4_1_4_1">
+						<div class="head_5_1_4_1_4_1_1"><img src="index_1_1.png" alt="" width="150" height="120"></div>
+						<div class="head_5_1_4_1_4_1_2">门槛低</div>
+						<div class="head_5_1_4_1_4_1_3">通过率高</div>
+					</div>
+					<div class="head_5_1_4_1_4_1">
+						<div class="head_5_1_4_1_4_1_1"><img src="index_1_2.png" alt="" width="150" height="120"></div>
+						<div class="head_5_1_4_1_4_1_2">审批快</div>
+						<div class="head_5_1_4_1_4_1_3">极速审批</div>
+					</div>
+					<div class="head_5_1_4_1_4_1">
+						<div class="head_5_1_4_1_4_1_1"><img src="index_1_3.png" alt="" width="150" height="120"></div>
+						<div class="head_5_1_4_1_4_1_2">低费率</div>
+						<div class="head_5_1_4_1_4_1_3">低手续费</div>
+					</div>
+					<div class="head_5_1_4_1_4_1">
+						<div class="head_5_1_4_1_4_1_1"><img src="index_1_4.png" alt="" width="150" height="120"></div>
+						<div class="head_5_1_4_1_4_1_2">分期灵活</div>
+						<div class="head_5_1_4_1_4_1_3">可选多种分期</div>
+					</div>
+					<div class="head_5_1_4_1_4_1">
+						<div class="head_5_1_4_1_4_1_1"><img src="index_1_5.png" alt="" width="150" height="120"></div>
+						<div class="head_5_1_4_1_4_1_2">流程简单</div>
+						<div class="head_5_1_4_1_4_1_3">申请操作简单</div>
+					</div>
+				</div>
+			</div>
+			</div>
+			<div class="head_5_1_5">
+				<div class="head_5_1_5_1">
+				<div class="head_5_1_5_1_1">
+					<div class="head_5_1_5_1_1_1"></div>
+					<div class="head_5_1_5_1_1_2">申请资格</div>
+					<div class="head_5_1_5_1_1_3"></div>
+					<div class="head_5_1_5_1_1_4"><img src="con4_pic1.png" alt="" width="200" height="150"></div>
+					<div class="head_5_1_5_1_1_5">18周岁以上中国公民(港澳台除外)</div>
+					<div class="head_5_1_5_1_1_6">18周岁以下可由父母代为申请</div>
+				</div>
+				<div class="head_5_1_5_2">
+					<div class="head_5_1_5_1_2_1"></div>
+					<div class="head_5_1_5_1_2_2">申请所需材料</div>
+					<div class="head_5_1_5_1_2_3"></div>
+					<div class="head_5_1_5_1_2_4"><img src="con4_pic2.png" alt="" width="200" height="150"></div>
+					<div class="head_5_1_5_1_2_5">本人二代身份证、本人银行卡</div>
+					<div class="head_5_1_5_1_2_6">18岁以下需要提供户口本</div>
+				</div>
+				</div>
+			</div>
+			<div class="head_5_1_6">
+				<div class="head_5_1_6_1">
+				<div class="head_5_1_6_1_1">
+					<div class="head_5_1_6_1_1_1"></div>
+					<div class="head_5_1_6_1_1_2">学费交给谁</div>
+					<div class="head_5_1_6_1_1_3"></div>
+					<div class="head_5_1_6_1_1_4"><img src="con5_pic1.png" width="400" height="130"></div>
+					<div class="head_5_1_6_1_1_5">百度会将学费支付给学校</div>
+					<div class="head_5_1_6_1_1_6">如果您未能与学校签署上课协议，贷款不生效
+如果发生退款，钱款将直接退回百度</div>
+				</div>
+				<div class="head_5_1_6_2">
+					<div class="head_5_1_6_1_2_1"></div>
+					<div class="head_5_1_6_1_2_2">申请流程</div>
+					<div class="head_5_1_6_1_2_3"></div>
+					<div class="head_5_1_5_1_2_4"><img src="con5_pic2.png" width="400" height="130"></div>
+					<div class="head_5_1_6_1_2_6">申请额度</div>
+					<div class="head_5_1_6_1_2_7">激活额度</div>
+					<div class="head_5_1_6_1_2_8">交学费</div>
+					<div class="head_5_1_6_1_2_9">申请额度15秒审核完成，正常30分钟内激活完成</div>
+				</div>
+				</div>
+			</div>
+			<div class="head_5_1_7">
+				<div class="head_5_1_7_1">
+				<div class="head_5_1_7_1_1">
+					<div class="head_5_1_7_1_1_1"></div>
+					<div class="head_5_1_7_1_1_2">如何还款</div>
+					<div class="head_5_1_7_1_1_3"></div>
+					<div class="head_5_1_7_1_1_4"><img src="con6_pic1.png" alt="" width="200" height="130"></div>	
+					<div class="head_5_1_7_1_1_5">在百度钱包绑定银行卡，每月按期还款</div>	
+					<div class="head_5_1_7_1_1_6">还款时间：每月15日之前</div>	
+					<div class="head_5_1_7_1_1_7">需要退款、提前一次性还款，联系百度有钱花客服</div>					
+				</div>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!--<div class="head_3"></div>
+	
+	<div class="head_4"></div>-->
+	
+	<div class="head_6" name="3F" id="3F" style="width:100%;height:100%;background:url(1.jpg); background-position:center bottom">
+		<div class="head_6_1" >
+			<div class="head_6_1_1">机构简介</div>
+			<div class="head_6_1_2">
+<div style="text-indent:2em"> 南通博得IT计算机培训中心（注册商标：Boode），是南通的一家专业IT人才服务与培训机构，我们的师资团队来自于长三角各大城市的拥有一线软件开发经验的企业开发人员 ，我们秉持“教育是一份良心，不夸大‘品牌’，只做良心”的教育理念，以全面快速提供学员的职业技能为最终目标，一贯坚持以教学质量为根本，以企业实际项目为案例进行教学，实行6~8人的小班授课，授课老师均有多年实际项目经验确保学员学习质量。 中心现主要以JAVA、.NET、Android、PHP、UT前端设计为主要培训项目。于2013年2月正式与南通多家软件开发企业签订“学员学习实训协议”，学员可以将在课堂上学到的技能立即转化为企业项目，大大提高了掌握软件开发技能的速度和质量。</div>
+ 博得的优势:
+<div style="text-indent:2em">1、八年办学历史，专注于设计/开发类教育培训，我们更专业；</div>
+<div style="text-indent:2em">2、独具特色的课程体系，零起点入学，分阶式教学模式，由浅入深，不仅学会，而且学精；</div>
+<div style="text-indent:2em">3、设计业界精英授课，大量案例讲解，拥有与其他机构不一样的培训质量和效果，四大专业六个月制全科就业班、一年制设计精英就业班、速成单科班供不同需求的学员选择；</div>
+<div style="text-indent:2em">4、用作品说话，每个学员毕业都能独立设计/开发出自己的作品集，毕业推荐设计师/工程师相关岗位工作，增设创业培训课程，免费提供创业、就业指导服务；</div>
+<div style="text-indent:2em">5、收费公开透明，中途不加收其它任何费用；</div>
+<div style="text-indent:2em">6、通过博得培训后就业的学员达1000多人，合作用人企业达300家，每期班不少于95%就业，是目前南通地区就业率最高,就业数最多，就业资源最丰富的培训中心 !</div>
+			</div>
+		</div>
+		</div>
+	
+	<div class="bottom_1">
+		<div class="bottom_1_1">机构地址：江苏省南通市崇川区中江国际广场4号楼B座716室</div>
+		<div class="bottom_1_1">联系电话：0513-85336466</div>
+	</div>
+	<div class="bottom_2">
+		<div class="bottom_2_1">2010-2017 南通博得IT计算机培训中心版权所有 苏IP备13008877</div>
+	</div>
+	<div class="cl">
+				<a href="#2F"><div class="cl_1"><img src="cl_01.png"></div></a>
+				<!--<a href="#2F"><div class="cl_1"><img src="mobile/Img/cl_02.png"></div></a>-->
+				<a href="#3F"><div class="cl_1"><img src="cl_03.png"></div></a>
+				<a href="http://p.qiao.baidu.com/im/index?siteid=6969349&amp;ucid=10633287&amp;cp=&amp;cr=&amp;cw=" target="_blank"><div class="cl_1"><img src="cl_04.png"></div></a>
+				<a href="#top"><div class="cl_1"><img src="cl_05.png"></div></a>
+			</div>	
+
+
+</body></html>

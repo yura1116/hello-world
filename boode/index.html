@@ -1,0 +1,514 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>南通博得教育|南通JAVA培训|前端培训|android培训|PHP培训|南通软件开发培训|IT培训</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="南通最好的java培训机构——南通博得IT计算机培训中心，软件开发培训领域涵盖：java高级软件工程师、.NET高级软件工程师、Android高级软件工程师、电子商务专员等，专注于各类IT培训，为企业输送一流的软件开发人才">
+    <meta http-equiv="keywords" content="南通博得教育,IT培训,南通java培训,软件开发培训,IT认证培训,南通java培训机构学校.net培训,南通android开发培训,">
+    <meta name="copyright" content="南通博得"/>
+    <meta name="author" content="南通博得"/>
+
+<link href="style.css" rel="stylesheet" type="text/css" />
+<!--菜单栏-->
+<link href="js/superfish/superfish.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="js/fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet" type="text/css" />
+<link href="js/flexslider/flexslider.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="js/jcarousel/jcarousel.css" rel="stylesheet" type="text/css" />
+<!--浮动广告-->
+<link href="settings/styling.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<!--滚动到页面顶端-->
+<script type="text/javascript" src="js/scrolltop.js"></script>
+
+<!--就业学员 IT技术-->
+<script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.4.js"></script>
+<script type="text/javascript" src="js/tipsy/jquery.tipsy.js"></script>
+<script type="text/javascript" src="js/jcarousel/jquery.elastislide.js"></script>
+<script type="text/javascript" src="js/hover.js"></script>
+
+<!--滚动广告-->
+<script type="text/javascript" src="settings/styleswitch.js"></script>
+
+<!---广告箱-->
+<script type="text/javascript" src="js/flexslider/jquery.flexslider.js"></script>
+
+
+
+<script type="text/javascript">
+	$(window).load(function() {
+		$('.flexslider').flexslider();
+	});
+</script>
+
+<!--在线课堂-->
+<script type="text/javascript" src="js/jquery.tweet.js"></script>
+<script type="text/javascript">
+	jQuery(function($){
+		$("#tweet").tweet({
+			avatar_size: 32,
+			count: 2,
+		query: "themeforest",
+		loading_text: "Loading Tweets..."
+		});
+	});
+</script>
+<script type="text/javascript">
+  	// initialise plugins
+		jQuery(function(){
+			// Banners button
+			jQuery('ul.banners_cycle li').mouseenter(function(){
+				jQuery(this).find('.button').stop(false,true).fadeIn();
+			})
+			jQuery('ul.banners_cycle li').mouseleave(function(){
+				jQuery(this).find('.button').stop(false,true).fadeOut();
+			});
+			
+			// Banners
+			jQuery('ul.banners_cycle li:not(.style-1)').mouseenter(function(){
+				jQuery(this).css('z-index','6');
+				jQuery(this).stop(false, true).animate({right:'-64px'}, {easing:"swing", duration: 300});
+				jQuery(this).animate({right:'0'});
+			});
+			jQuery('ul.banners_cycle li:not(.style-1)').mouseleave(function(){
+				jQuery(this).stop(false, true).animate({right:'-64px'});
+				jQuery(this).stop(false, true).animate({right:'0'}, 'slow');
+			});
+			
+			// Banner #2
+			jQuery('ul.banners_cycle li.style-2').mouseleave(function(){
+				jQuery(this).css('z-index','5');
+			});
+			// Banner #3
+			jQuery('ul.banners_cycle li.style-3').mouseleave(function(){
+				jQuery(this).css('z-index','4');
+			});
+			// Banner #4
+			jQuery('ul.banners_cycle li.style-4').mouseleave(function(){
+				jQuery(this).css('z-index','3');
+			});
+			// Banner #5
+			jQuery('ul.banners_cycle li.style-5').mouseleave(function(){
+				jQuery(this).css('z-index','2');
+			});
+			// Banner #6
+			jQuery('ul.banners_cycle li.style-6').mouseenter(function(){
+				jQuery('body').css('overflow-x','hidden');
+			});
+			jQuery('ul.banners_cycle li.style-6').mouseleave(function(){
+				jQuery(this).css('z-index','1');
+				jQuery('body').css('overflow-x','hidden');
+			});
+		});
+  </script>
+</head>
+<body>
+<div class="container-wrap" id="cap"></div>
+<!--HEADER-->
+<div id="header" class="clear">
+  <div class="header-wrapper">
+    <!--LOGO-->
+    <div class="logo">
+      <h1><a href="http://www.boode.com.cn/index.html"><img src="img/logo.png" alt="" title="" /></a></h1>
+    </div>
+    <!--MENU-->
+    <nav id = "main-nav-menu">
+      <ul class="sf-menu">
+        <li class="active"><a href="http://www.boode.com.cn/index.html" style="font-size:14px">首页</a>
+          
+        </li>
+        <li> <a href="http://www.boode.com.cn/about.html" style="font-size:14px" target="_blank">关于博得</a></li>
+        <li><a href="javascript:void(0)" style="font-size:14px">课程设置</a>
+          <ul>
+            <li><a href="http://www.boode.com.cn/course-java.html" target="_blank">Java高级软件工程师</a> </li>
+            <li><a href="http://www.boode.com.cn/course-android.html" target="_blank">Android软件工程师</a></li>
+			<li><a href="http://www.boode.com.cn/course-ui.html" target="_blank">UI前端设计工程师</a></li>
+            <li><a href="http://www.boode.com.cn/course-net.html" target="_blank">.Net高级软件工程师</a></li>
+            <li><a href="http://www.boode.com.cn/course-ios.html" target="_blank">IOS开发实训</a></li>
+          </ul>
+        </li>
+        <li> <a href="http://www.boode.com.cn/students.html" style="font-size:14px" target="_blank">就业明星</a></li>
+        <li><a href="http://www.boode.com.cn/online-services.html" style="font-size:14px" target="_blank">在线课程</a>
+          
+        </li>
+        <li><a href="http://www.boode.com.cn/blog-grid.html" style="font-size:14px" target="_blank">知识分享</a>
+          <!--<ul>
+            <li><a href="blog-list.html">List Style</a></li>
+            <li><a href="blog-grid.html">Grid Style</a></li>
+            <li><a href="blog-list-alternate.html">Alternate Style</a></li>
+            <li><a href="single.html">Single Page</a></li>
+          </ul>-->
+        </li>
+        <li><a href="http://www.boode.com.cn/contact.html" style="font-size:14px" target="_blank">联系我们</a></li>
+      </ul>
+    </nav>
+    <!-- end menu -->
+    <select id = "responsive-main-nav-menu" onchange = "javascript:window.location.replace(this.value);">
+    </select>
+  </div>
+  <div class="clear"></div>
+</div>
+<div class="copyrights">南通博得教育http://www.boode.com.cn/ 版权所有 苏IP备13008877 </div>
+
+<!--SITE CONTAINER-->
+<div id="container">
+  <!--SITE CONTENTS-->
+  <div id="contents-1" class="clear">
+    <!--SLIDER-->
+    <div id="slider" class="flexslider">
+      <ul class="slides">
+        <li><img src="img/gallery/1.jpg" alt="" title="" />
+          <h2>- 加量不加价的JavaEE Android课程<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（拒绝忽悠，良心教育）</h2>
+          <p class="flex-caption">骨灰级师资，6年授课经验<br>
+          小班互动授课，6W行代码亲手写<br>
+          推荐就业，年薪5W起<br>
+          经典实践项目，与企业无缝衔接
+          </p>
+          
+          <!--<a href="#" class="round button-c1">read more</a> </li>-->
+        <li><img src="img/gallery/2.jpg" alt="" title="" />
+          <div class="flex-caption-round">
+            <h2>- 还在等什么？？？！！！！再等没位置了！！！</h2>
+            <p class="flex-caption">全程采用小班教学<br>超高的教学质量、人气和性价比<br>近年来每个班都爆满<br>来晚又要等四个月！等四个月等于四个月工资！</p>
+            <!--<a href="#" class="round button-c1">read more</a></div>-->
+        </li>
+        <li><img src="img/gallery/3.jpg" alt="" title="" />
+          <h2>- 耳目一样的教学理念和教学方式</h2>
+          <p class="flex-caption">
+          	启发式教学，基础再差都不怕<br>
+          	不仅管就业，还管学员的未来发展<br>
+            做事之前先做人，教与学理念更新
+          </p>
+          <!--<a href="#" class="round button-c1">read more</a> </li>-->
+      </ul>
+    </div>
+    <div class="has-divider"></div>
+    <!--MAIN CONTENT-->
+    <div class="fullwidth">
+      <!--SERVICES-->
+      <div class="main-services clear">
+        <ul>
+          <li class="bt-30"> <img src="img/icons/01_A.png" alt="" title="" />
+            <h4>Java高级软件工程师</h4>
+            <p style="font-size:12px">金牌教师6年以上授课经验，授课方式耳目一新，想学不会都难！！4大项目，6万行代码，助力零基础学员4个月不出校门掌握企业1年工作经验！</p>
+            <a href="course-java.html" target="_blank" style="font-size:12px">&mdash; 课程详细介绍 &mdash;</a> </li>
+          <li class="bt-30 second"> <img src="img/icons/02_A.png" alt="" title="" />
+            <h4>Android软件工程师</h4>
+            <p style="font-size:12px">业内最新Android4.0+课程，全真教学案例，Java基础+J2EE+Android全方位实训课程，课程加量不加价，高薪入职史上最火爆的移动APP开发职位</p>
+            <a href="course-android.html" target="_blank" style="font-size:12px">&mdash; 课程详细介绍 &mdash;</a> </li>
+          <li class="bt-30-2"> <img src="img/icons/03_A.png" alt="" title="" />
+            <h4>.NET高级软件工程师</h4>
+            <p style="font-size:12px">深入系统讲授基于.NET平台的系列技术，全面引入工程实践理念，以项目带技术，在解决工程问题中学习软件开发，让你不再依赖拖拉控件写代码！</p>
+            <a href="course-net.html" target="_blank" style="font-size:12px">&mdash; 课程详细介绍 &mdash;</a> </li>
+          <li class="last"> <img src="img/icons/05_A.png" alt="" title="" />
+            <h4>UI前端设计</h4>
+			<p style="font-size:12px">无缝整合UI设计和前端开发技术体系，区别于传统UI培训课程，学员不再是技术含金量低下的普通“美工”，专注Web前端开发中HTML5、CSS3、jQuery等热门技术</p>
+            <a href="course-ui.html" target="_blank" style="font-size:12px">&mdash; 课程详细介绍 &mdash;</a> </li>
+            <!--<p style="font-size:12px">极其注重C及Objective-C基础技术教学，全程贯穿项目实战的培训，透过案例详细地讲述了ios游戏开发中的核心技术及游戏引擎</p>
+            <a href="course-ios.html" target="_blank" style="font-size:12px">&mdash; 课程详细介绍 &mdash;</a> </li>-->
+        </ul>
+      </div>
+      <div class="has-divider"></div>
+      <!--Gallery & Tabs-->
+      <div class="home-rc clear">
+        <div class="fancy-text">
+        	<div>
+              <h3>就业明星学员</h3>
+              <p style="font-size:12px">“南通博得IT计算机培训中心”毕业的优秀学员绝大多数就业于长三角地区的大中型软件开发企业，年薪5W起，毕业2-3年年薪最高17W</p>
+              <a href="students.html" target="_blank" style="font-size:12px">所有学员&mdash;</a>
+            </div>
+              <div>
+                  <img  src="img/wechat_code.jpg"/>
+               </div>
+        </div>
+        <!--毕业学员 Gallery-->
+        <div class="gallery four-columns clear">
+          <div id="carousel" class="es-carousel-wrapper nav-none">
+            <div class="es-carousel">
+              <ul>
+                <li>
+                	<a href="img/client/large1.jpg" rel="gallery"><span class="rollover-zoom">&nbsp;</span><img src="img/client/client1.png" alt="" title="" /></a>
+                    <a href="img/client/large2.jpg" rel="gallery" ><span class="rollover-zoom">&nbsp;</span><img src="img/client/client2.png" alt="" title="" /></a>
+                    <a href="img/client/large3.jpg" rel="gallery" class="m-bot3"><span class="rollover-zoom">&nbsp;</span><img src="img/client/client3.png" alt="" title="" /></a>
+                </li>
+                <li>
+                	<a href="img/client/large4.jpg" rel="gallery"><span class="rollover-zoom">&nbsp;</span><img src="img/client/client4.png" alt="" title="" /></a>
+                    <a href="img/client/large5.jpg" rel="gallery" ><span class="rollover-zoom">&nbsp;</span><img src="img/client/client5.png" alt="" title="" /></a>
+                    <a href="img/client/large6.jpg" rel="gallery" class="m-bot3"><span class="rollover-zoom">&nbsp;</span><img src="img/client/client6.png" alt="" title="" /></a>
+                </li>
+                
+                <li>
+                	<a href="img/client/large10.jpg" rel="gallery"><span class="rollover-zoom">&nbsp;</span><img src="img/client/client10.png" alt="" title="" /></a>
+                    <a href="img/client/large8.jpg" rel="gallery"><span class="rollover-zoom">&nbsp;</span><img src="img/client/client8.png" alt="" title="" /></a>
+                    <a href="img/client/large9.jpg" rel="gallery" class="m-bot3"><span class="rollover-zoom">&nbsp;</span><img src="img/client/client9.png" alt="" title="" /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="has-divider"></div>
+      <!--Tagline-->
+      <div class="tagline">
+         
+             <div class="notify clear">
+                <h2><b>还在为选择计算机专业后悔吗？还在为找不到工作犯愁吗？还在为工资低、工作环境差苦恼吗？</b></h2>
+                <span><a href="javascript:void(0)" class="btn" onclick="javascript:window.open('http://wpa.qq.com/msgrd?v=3&uin=745636944&site=qq&menu=yes')">点击报名</a></span> 
+             </div>
+             <div>
+             
+             
+               
+        	 <div style="width:680px;height:100%;float:left; ">
+
+                  
+                  <table style="width:100%;  border:0px">
+                  	<tr>
+                    	<td>
+                        	<h3 style="margin-bottom:0px;">开班时间</h3>
+                        </td>
+                        <td>
+                        	<h3 style="margin-bottom:0px;">开班课程</h3>
+                        </td>
+                        <td>
+                        	<h3 style="margin-bottom:0px;">开班人数</h3>
+                        </td>
+                        <td>
+                        	<h3 style="margin-bottom:0px;">课程详情</h3>
+                        </td>
+                        <td>
+                        	<h3 style="margin-bottom:0px;">在线咨询</h3>
+                        </td>
+                    </tr>
+                  </table>
+                  <ul class="list">
+					<li><a href="#">2017-04-28 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UI前端设计&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12人</a>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <a href="course-java.html">课程详情</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="img/pa.gif" onclick="javascript:window.open('http://wpa.qq.com/msgrd?v=3&uin=745636944&site=qq&menu=yes')"/>
+                    </li>
+					<li><a href="#">2017-04-15 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Java J2EE 大数据&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14人</a>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <a href="course-java.html">课程详情</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="img/pa.gif" onclick="javascript:window.open('http://wpa.qq.com/msgrd?v=3&uin=745636944&site=qq&menu=yes')"/>
+                    </li>
+					<li><a href="#">2017-03-01 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Java Android就业班&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10人</a>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <a href="course-java.html">课程详情</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="img/pa.gif" onclick="javascript:window.open('http://wpa.qq.com/msgrd?v=3&uin=745636944&site=qq&menu=yes')"/>
+                    </li>
+					<li><a href="#">2017-02-25 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UI前端设计&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12人</a>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <a href="course-android.html">课程详情</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="img/pa.gif" onclick="javascript:window.open('http://wpa.qq.com/msgrd?v=3&uin=745636944&site=qq&menu=yes')"/>
+                    </li>
+				    <li><a href="#">2017-02-15 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Java J2EE就业班&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14人</a>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <a href="course-android.html">课程详情</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="img/pa.gif" onclick="javascript:window.open('http://wpa.qq.com/msgrd?v=3&uin=745636944&site=qq&menu=yes')"/>
+                    </li>
+					<li><a href="#">2017-01-15 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IOS高级软件工程师&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8人</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="course-ios.html">课程详情</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="img/pa.gif" onclick="javascript:window.open('http://wpa.qq.com/msgrd?v=3&uin=745636944&site=qq&menu=yes')"/>
+                    </li>
+					
+					
+					
+					
+                  	
+                  	
+                  	
+                  	
+                    <!--<li><a href="#">2015-5-15 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.NET 高级软件工程师&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12人</a>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;课程详情
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="img/pa.gif" onclick="javascript:window.open('http://wpa.qq.com/msgrd?v=3&uin=745636944&site=qq&menu=yes')"/>
+                    </li>-->
+                    
+ 
+                    
+                    
+                  </ul>
+               </div>
+      			
+               <div style="width:100%;  height:200px;" align="right">
+                		<img  src="img/contact_three.png"/>
+               	</div>
+         	   
+               </div>
+      </div>
+      
+      
+      <div class="has-divider"></div>
+      <!--BANNER-->
+      <div class="clear">
+        <div class="fancy-text">
+          <h3>在线远程课堂</h3>
+          <p style="font-size:12px">四大课程，2000小时在线精品教学视频免费学，足不出户就能领率名师风采，各类稀缺编程资源免费下载</p>
+          <a href="online-services.html" target="_blank" style="font-size:12px">所有课程 &mdash;</a> </div>
+        <div id="widget_my_cyclewidget" class="clear">
+          <ul class="banners_cycle">
+            <li class="banners_item style-1 ">
+              <div class="tail">
+                <div class="inner">
+                  <h4>J2SE</h4>
+                  <p style="font-size:12px">J2SE强化训练,打造坚如磐石的Java编程基础,最有趣的桌面应用实践</p>
+                  <a href="http://i.xue.taobao.com/detail.htm?spm=a2174.7365761.39b9.32.hkJ7fj&courseId=6077" class="button">查看课程</a> </div>
+              </div>
+            </li>
+            <li class="banners_item style-2 nomargin">
+              <div class="tail">
+                <div class="inner">
+                  <h4>Oracle</h4>
+                  <p style="font-size:12px">Oracle 11g核心课程，掌握最实用的sql和PL-SQL编程技巧</p>
+                  <a href="http://i.xue.taobao.com/detail.htm?spm=a2174.7365761.39b9.60.kOGlRf&courseId=28370" class="button">查看课程</a> </div>
+              </div>
+            </li>
+            <li class="banners_item style-3 ">
+              <div class="tail">
+                <div class="inner">
+                  <h4>Java Web</h4>
+                  <p style="font-size:12px">掌握和Web编程相关的所有基础知识和技巧:HTML CSS JavaScript JSP Ajax</p>
+                  <a href="http://i.xue.taobao.com/detail.htm?spm=a2174.7365761.39b9.56.hkJ7fj&courseId=29408" class="button">查看课程</a> </div>
+              </div>
+            </li>
+            <li class="banners_item style-4 nomargin">
+              <div class="tail">
+                <div class="inner">
+                  <h4>SSH</h4>
+                  <p style="font-size:12px">时下最流行的企业级应用快速开发模式,Struts2+Hibernate+Spring</p>
+                  <a href="http://i.xue.taobao.com/detail.htm?spm=a2174.7365761.39b9.28.587QD7&courseId=26620" class="button">查看课程</a> </div>
+              </div>
+            </li>
+            <li class="banners_item style-5 ">
+              <div class="tail">
+                <div class="inner">
+                  <h4>jQuery</h4>
+                  <p style="font-size:12px">企业最流行的JavaScript框架，前端开发不可获取的课程，没学就OUT了</p>
+                  <a href="http://i.xue.taobao.com/detail.htm?spm=a2174.7365761.39b9.16.hkJ7fj&courseId=23452" class="button">查看课程</a> </div>
+              </div>
+            </li>
+            <li class="banners_item style-6 nomargin">
+              <div class="tail">
+                <div class="inner">
+                  <h4>Android</h4>
+                  <p style="font-size:12px">最火热的移动开发平台，精品课程设置加全真模拟案例，助你赢在起跑线</p>
+                  <a href="http://i.xue.taobao.com/detail.htm?spm=a2174.7365761.39b9.40.QqghEa&courseId=8478" class="button">查看课程</a> </div>
+              </div>
+            </li>
+          </ul>
+          <!-- end of photos_cycle -->
+        </div>
+      </div>
+      <div class="has-divider"></div>
+      <!--BLOG-->
+      <div class="blog blist clear">
+        <div class="fancy-text">
+          <h3>编程前沿技术</h3>
+          <p style="font-size:12px">滚动发布最新最前沿的IT技术，帮助学员把握技术脉搏，永远立于不败之地，观念和技术视野在此一遍遍被刷新</p>
+          <a href="blog-grid.html" target="_blank" style="font-size:12px">所有热帖 &mdash;</a> </div>
+        <div id="carousel-home-blog" class="es-carousel-wrapper nav-none">
+          <div class="es-carousel">
+            <ul>
+              <li> <a href="share/share-detail.html" class="img-title" target="_blank"><span class="rollover-list">详细内容</span>
+					<img src="img/blog/bthumb6.jpg" alt="" title="" /></a>
+                <div class="desc">
+                  <h5><a href="share/share-detail.html" target="_blank">程序员只能干到30岁？</a></h5>
+                  <p>程序员能干多少年？是不是只能到30岁？程序员都吃青春饭？</p>
+                </div>
+              </li>
+              <li> <a href="share/share-detail.html" class="img-title" target="_blank"><span class="rollover-list">详细内容</span><img src="img/blog/bthumb2.jpg" alt="" title="" /></a>
+                <div class="desc">
+                  <h5><a href="share/share-detail.html" target="_blank">编程10大恶习</a></h5>
+                  <p>软件开发的帕雷托法则：“大多数的问题都是由少数不良编码习惯造成的”...</p>
+                </div>
+              </li>
+              <li> <a href="share/share-detail.html" class="img-title" target="_blank"><span class="rollover-list">详细内容</span><img src="img/blog/bthumb3.jpg" alt="" title="" /></a>
+                <div class="desc">
+                  <h5><a href="share/share-detail.html" target="_blank">Java高仿酷我音乐盒</a></h5>
+                  <p>用Swing实现的：酷我音乐盒界面，看看是不是已经算高仿了，好奇嘛？...</p>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!--Footer-->
+<div id="footer" class="clear">
+  <!--BOTTOM COLUMNS-->
+  <div id="footer-columns" class="clear">
+    <div class="footer-wrapper">
+      <!--TAGS-->
+      <div class="tags">
+        <h5>友情链接</h5>
+        <a href="http://www.shcssnet.com.cn" target="_blank">上海中软</a> <a href="http://www.cattsoft.com/" target="_blank">大唐软件</a> <a href="http://www.suning.cn/" target="_blank">苏宁易购</a> <a href="http://www.augmentum.com.cn/" target="_blank">上海群硕</a> <a href="http://www.dianping.com/" target="_blank">大众点评</a> <a href="http://www.primeton.com/" target="_blank">上海普元</a> <a href="http://www.trueway.com.cn/" target="_blank">江苏中威</a> <a href="http://www.pactera.com/" target="_blank">上海文思海辉</a> <a href="http://www.eseals.cn/" target="_blank">昆山百润百成</a> <a href="http://www.ntchst.com/" target="_blank">南通春晖</a> <a href="http://www.oracleoaec.net/" target="_blank">oracle培训</a><a href="http://www.nfolok.cn/" target="_blank">南通家庭在线</a> <a href="http://www.ntu.edu.cn/" target="_blank">南通大学</a> <a href="http://www.zlvc.edu.cn/" target="_blank">南通理工学院</a><a href="http://jyj.nantong.gov.cn/" target="_blank">南通市教育局</a>  <a href="#">......</a> </div>
+      <!--ARCHIVES-->
+      <div class="archive">
+        <h5>网站地图</h5>
+        <ul>
+          <li><a href="http://www.boode.com.cn/index.html" target="_blank">首页</a></li>
+          <li><a href="http://www.boode.com.cn/about.html" target="_blank">关于博得</a></li>
+          <li><a href="http://www.boode.com.cn/course-java.html" target="_blank">课程设置</a></li>
+          <li><a href="http://www.boode.com.cn/students.html" target="_blank">就业明星</a></li>
+          <li><a href="http://www.boode.com.cn/online-services.html" target="_blank">在线课程</a></li>
+          <li><a href="http://www.boode.com.cn/blog-grid.html" target="_blank">知识分享</a></li>
+          <li><a href="http://www.boode.com.cn/contact.html" target="_blank">联系我们</a></li>
+        </ul>
+      </div>
+      <!--ABOUT-->
+      <div class="about-brief">
+        <h5>合作伙伴</h5>
+        <img src="img/partner.png"/>
+      </div>
+    </div>
+  </div>
+  <!--FOOTER-->
+  <div id="footer-bot">
+    <div class="footer-wrapper" align="center" style="font-size:12px" >
+      Copyright ? 南通博得IT计算机培训中心 http://www.boode.com.cn/ 版权所有 苏IP备13008877<br>
+      地址：南通市崇川区中江国际广场4号楼B座716室（教育路教学点） / 南通市崇川区中南世纪花城16号楼207(中南教学点-南通大学北门)&nbsp; &nbsp;   &nbsp;&nbsp; 咨询电话：0513-85336466
+    </div>
+  </div>
+</div>
+<a href="#" id="toTop">&uarr;</a>
+
+
+<!--左侧浮动广告牌--->
+<div><span class="door"><img src="settings/img/setting.png" alt="" title="" /></span></div>
+<div class="options"> <span class="close"><img src="settings/img/close.png" alt="" title="" /></span>
+  <h4 align="center">博得IT计算机培训中心<br>报名热线</h4>
+  <ul>
+    <li><span style="float:left">秦老师：</span><a style="float:left" target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=745636944&site=qq&menu=yes'><img src='http://wpa.qq.com/pa?p=2:745636944:41 &amp;r=0.22914223582483828' alt='点击这里'></a></li>
+
+    
+  </ul>
+  <ul style="margin-top:6px">
+       <li><span style="float:left">季老师：</span><a style="float:left" target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1767025956&site=qq&menu=yes'><img src='http://wpa.qq.com/pa?p=2:1767025956:41 &amp;r=0.22914223582483828' alt='点击这里'></a></li>
+  </ul>
+  
+   <ul style="margin-top:6px">
+    <li><img src="img\icons\qq.png"><span style="font-size:15px; margin-left:5px">745636944</span></li>    
+  </ul>
+ <ul style="margin-top:6px">
+    <li><img src="img\icons\phone.png"><span style="font-size:12px; margin-left:5px">0513-85336466</span></li>    
+  </ul>
+     <ul style="margin-top:6px">
+    <li><img src="img\icons\mobile.png"><span style="font-size:15px; margin-left:5px">13813726471</span></li>    
+  </ul>
+</div>
+</body>
+</html>
