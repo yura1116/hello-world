@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>订单列表</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+		<link rel="stylesheet" href="../css/bootstrap-datetimepicker.css" />
+		<script type="text/javascript" src="../js/jquery.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../js/bootstrap-datetimepicker.js"></script>
+		<script type="text/javascript" src="../js/bootstrap-datetimepicker.zh-CN.js"></script>
+		<script type="text/javascript" src="../js/vue.js"></script>
+		
+	
+	</head>
+
+	<body>
+		<div>
+			<!-- start list -->
+			<div>
+				<form class="form-inline" role="form">
+					<div class="form-group">
+						<ul class="breadcrumb">
+							<label>位置:</label>
+							<li>
+								<a href="#" style="color: #000000;">业务管理</a>
+							</li>
+							<li>
+								<a href="#" style="color: #000000;">订单管理</a>
+							</li>
+							<li>
+								<font style="color: #000000;">订单列表</font>
+							</li>&nbsp;&nbsp;
+							<label class="sr-only" for="name">订单号</label>&nbsp;&nbsp;&nbsp;
+							<li>
+								<b><font style="color: #000000;">用户ID</font></b>
+							</li>&nbsp;&nbsp;
+							<input type="text" class="form-control" id="name" placeholder="请输入用户ID">&nbsp;&nbsp;
+							<li>
+								<strong><font style="color: #000000;">订单号</font></strong>
+							</li>&nbsp;&nbsp;
+							<input type="text" class="form-control" id="name" placeholder="请输入订单号">&nbsp;&nbsp;
+							<li>
+								<b><font style="color: #000000;">订单日期</font></b>
+							</li>&nbsp;&nbsp;
+							
+							    <input class="input-append date form_datetime" size="16" type="text" value="" readonly>
+							    <span class="add-on"><i class="icon-th"></i></span>
+							
+							&nbsp;
+							<li>
+								<b><font style="color: #000000;">至</font></b>
+							</li>
+							&nbsp;&nbsp;
+							    <input class="input-append date form_datetime" size="16" type="text" value="" readonly>
+							    <span class="add-on"><i class="icon-th"></i></span>
+							&nbsp;&nbsp;
+							<button type="button" class="btn btn-primary" v-on:click="searchOrder">搜索</button>
+					</div>
+				</form>
+				</ul>
+			</div>
+
+			<div class="col-md-12">
+				
+				<div id="app">
+					<table class="table table-hover text-center">
+						<tr class="text-center text-info" id="se">
+							<th class="text-center">
+								<label>
+                              <input type="checkbox">
+                            </label>
+							</th>
+							<th class="text-center" style="color: #000000;">订单号</th>
+							<th class="text-center" style="color: #000000;">商品名称</th>
+							<th class="text-center" style="color: #000000;">用户ID</th>
+							<th class="text-center" style="color: #000000;">金额</th>
+							<th class="text-center" style="color: #000000;">购买时间</th>
+						</tr>
+						<tr v-for="order in orders ">
+							<td>
+								<label>
+                              <input type="checkbox" v-bind:value="order.id" v-model="checkedNames">
+                            </label>
+							</td>
+							<td>{{order.id}}</td>
+							<td>{{order.name}}</td>
+							<td>{{order.author}}</td>
+							<td style="color: red;">{{order.price}}</td>
+							<td>{{order.time}}</td>
+						</tr>
+						
+                    </tr>
+					</table>
+
+					<div class="text-right">
+						<ul class="pagination">
+							<li>
+								<a href="#">«</a>
+							</li>
+							<li>
+								<a href="#">1</a>
+							</li>
+							<li>
+								<a href="#">2</a>
+							</li>
+							<li>
+								<a href="#">3</a>
+							</li>
+							<li>
+								<a href="#">4</a>
+							</li>
+							<li>
+								<a href="#">5</a>
+							</li>
+							<li>
+								<a href="#">»</a>
+							</li>
+						</ul>
+					</div>
+
+					<p style="display: none;">Checked names: {{ checkedNames }}</p>
+
+					
+
+				</div>
+			</div>
+			<!-- end list -->
+
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el: '#app',
+			data: {
+				order: {
+					id: '0',
+					author: '',
+					name: '',
+					price: '',
+					time:''
+				},
+				checkedNames: [],
+				orders: [{
+					id: '123',
+					author: '31258',
+					name: '王金平幕僚：马英九声明字字见血  人活着没意思',
+					price: 30,
+					time:"2017.3.20"
+				}, {
+					id: '456',
+					author: '31258',
+					name: '王金平幕僚：马英九声明字字见血  人活着没意思',
+					price: 30,
+					time:"2017.3.20"
+				}]
+			},
+			methods: {
+				delItems: function() {
+					for(var i = 0; i < this.checkedNames.length; i++) {
+						for(var j = 0; j < this.orders.length; j++) {
+							var cur_order = this.orders[j];
+							if(cur_order.id == this.checkedNames[i]) {
+								this.orders.splice(j, 1);
+							}
+						}
+					}
+					this.checkedNames = [];
+				},
+				addItem: 　 function() {
+					this.orders.push(this.order);
+				}
+
+			}
+		})
+	</script>
+
+</html>
+<script type="text/javascript">
+		$(".form_datetime").datetimepicker({
+					format: "yyyy-mm-dd",
+					autoclose: true,
+					todayBtn: true,
+					todayHighlight: true,
+					showMeridian: true,
+					pickerPosition: "bottom-left",
+					language: 'zh-CN', 
+					//中文，需要引用zh-CN.js包  
+					startView: 2,
+					//月视图  minView: 2
+					//日期时间选择器所能够提供的最精确的时间选择视图  
+					});
+</script>

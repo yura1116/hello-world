@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数据列表</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css"/>
+		<script type="text/javascript" src="../js/jquery.js" ></script>
+	    <script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+		<script type="text/javascript" src="../js/vue.js" ></script>
+	</head>
+	<body>
+	<div >
+        <!-- start list -->
+        <div>
+        	<form class="form-inline" role="form">
+			<div class="form-group">
+			<ul class="breadcrumb">
+				<label>位置:</label>
+				<li><a href="#" style="color: #000000;">业务管理</a></li>   
+				<li><a href="#" style="color: #000000;">数据库价格修改</a></li>   
+				<li><font style="color: #000000;">数据列表</font></li>&nbsp;&nbsp;
+			    <label class="sr-only" for="name">id</label>
+			    <input type="text" class="form-control" id="name" placeholder="请输入数据名称">
+				<button type="button" class="btn btn-primary" v-on:click="searchdata">搜索</button>
+				 </div>
+				</form>
+			</ul> 
+        </div>
+        
+        <div class="col-md-12" >
+            
+            <div id="app">
+                <table class="table table-hover text-center">
+                    <tr class="text-center text-info" id="se">
+                    	<th class="text-center">评分</th>
+                        <th class="text-center">价格</th>
+                        
+                    </tr>
+                    <tr>
+                        <td>0-30</td>
+                        <td>
+                        	<span id="content">30</span>
+                        </td>
+                        
+                    </tr>
+                    
+                </table>
+                <div class="text-right">
+                	<input type="button" value="确定" />
+                </div>
+                <div class="text-right">
+                	 <ul class="pagination">
+					<li><a href="#">«</a></li>
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">»</a></li>
+				</ul>
+                </div>
+               
+                
+				
+            </div>
+        </div>
+        <!-- end list -->
+
+    </div>
+    <script type="text/javascript">
+	    function changeContent() {
+			var o = document.getElementById("content");
+			var c = o.innerHTML;
+			o.innerHTML = "<input type='text' style='width:30px' value='" + c + "'/>"
+		}
+    </script>
+</body>
+
+</html>
+
